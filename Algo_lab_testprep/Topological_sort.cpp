@@ -2,25 +2,23 @@
 using namespace std;
 const int MAXN = 1000;
 vector<int> graph[MAXN];
-
 int main()
 {
     int n, m;
     cin >> n >> m;
 
     vector<int> idg(n + 1, 0);
-
-    int u, v;
-    for (int i = 0; i < m; i++)
+	int u,v;
+    while(m--)
     {
         cin >> u >> v;
         graph[u].push_back(v);
         idg[v]++;
     }
 
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
-        cout << idg[i] << " ";
+        cout << idg[i] <<" ";
     }
     cout << endl;
 
